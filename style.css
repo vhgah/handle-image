@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --color-white: #ffffff;
+  --color-pink: #fff2f2;
+  --color-red: #e51a1b;
+  --color-gray: #cccccc;
+  --color-primary: #2675be;
+
+  --color-border: #c8c8c8;
+  --color-text: #555555;
+  
+  --small-font-size: 10px;
+  --normal-font-size: 16px;
+
+  --border-radius-small: 5px;
+  --height-input: 38px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text__title {
+  font-weight: 700;
+  font-size: var(--normal-font-size);
+  color: var(--color-text);
+}
+.text__description {
+  color: #828282;
+  font-size: var(--small-font-size);
+}
+
+.section__image {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  grid-auto-rows: min-content;
+  gap: 1.5rem;
+}
+
+.section__image-item {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: var(--color-gray);
+  border: 1px dashed var(--color-red);
+  border-radius: var(--border-radius-small);
+}
+
+.section__image-item label:first-child {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+.section__image-item label:hover {
+  background-color: var(--color-pink);
+  border-radius: var(--border-radius-input);
+}
+
+.input__image {
+  background: var(--color-white);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  font-size: var(--normal-font-size);
+  height: var(--height-input);
+  width: 100%;
+  padding-left: 15px;
+  outline: none;
+  display: none !important;
+}
+
+.data__image-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-small);
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+  transition: all 300ms ease;
+  display: none;
+}
+.data__image-namebox {
+  position: absolute;
+  bottom: -41%;
+}
+.data__image-title {
+  margin-bottom: 3px;
+}
+.data__image-action {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  text-align: left;
+  transition: all 400ms ease;
+  display: none;
+}
+.icon__trash,
+.icon__crop {
+  border-radius: 0px 5px 5px 0px;
+  margin: 0;
+}
+.icon__trash {
+  background-color: var(--color-red);
+  padding: 4px 10.75px;
+  display: block;
+  margin-bottom: 3px;
+}
+.icon__crop {
+  background-color: var(--color-primary);
+  padding: 3.25px 9.43px;
+}
+.icon__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 47px auto;
+}
+
+/* MODEL CROP IMAGE */
+
+#modalCropImage .preview {
+  overflow: hidden;
+  width: 125px;
+  height: 125px;
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: var(--border-radius-small);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+#modalCropImage .preview__text {
+  margin-left: 25px;
+  user-select: none;
+}
+#modalCropImage .modal-body {
+  padding-bottom: 0px;
+  padding-top: 6px;
+}
+#modalCropImage .modal-footer {
+  margin-top: 10px;
+}
+#modalCropImage .modal-dialog {
+  width: 700px;
+  top: 0px;
+}
+#modalCropImage .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#modalCropImage .img-container img {
+  max-width: 180px;
+  max-height: 180px;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+.cropper__action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.cropper__action .button-cropper-reset {
+  height: 24px;
+  min-width: 64px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  height: 32px;
+  transition: all 300ms ease;
+  user-select: none;
+}
+.cropper__action .button-cropper-reset:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.cropper__action .item__action {
+  width: 44px;
+  height: 32px;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+  cursor: pointer;
+  border-radius: var(--border-radius-small);
+}
+.cropper__action .item__action:hover {
+  background-color: #d8d8d8;
+}
+.cropper__action .item__action svg {
+  width: 16px;
+  height: 16px;
+}
+.cropper__action .lef__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

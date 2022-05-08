@@ -1,0 +1,542 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css"
+      integrity="sha256-jKV9n9bkk/CTP8zbtEtnKaKf+ehRovOYeKoyfthwbC8="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
+    />
+
+    <title>Upload, Preview, Cropper and Store Image</title>
+  </head>
+  <body>
+    <div class="section__image">
+      <div class="section__image-item">
+        <label id="label_1" for="file_1">
+          <img class="icon__add" src="assets/circle-plus.svg" alt="" />
+          <div class="data__image-thumb" data-index="1"></div>
+          <div class="data__image-action">
+            <img
+              class="icon__trash"
+              data-index="1"
+              src="assets/icon-trash.svg"
+              alt=""
+            />
+            <img
+              class="icon__crop"
+              data-index="1"
+              src="assets/icon-crop.svg"
+              alt=""
+            />
+          </div>
+        </label>
+        <input
+          id="file_1"
+          data-index="1"
+          multiple="multiple"
+          accept="image/png, image/gif, image/jpeg"
+          type="file"
+          name=""
+          class="input__image"
+        />
+        <div class="data__image-namebox">
+          <div class="text__title data__image-title">Ảnh đại diện</div>
+          <div class="text__description">( Kích thước 500x500 )</div>
+        </div>
+      </div>
+
+      <div class="section__image-item">
+        <label id="label_2" for="file_2">
+          <img class="icon__add" src="assets/circle-plus.svg" alt="" />
+          <div class="data__image-thumb" data-index="2"></div>
+          <div class="data__image-action">
+            <img
+              class="icon__trash"
+              data-index="2"
+              src="assets/icon-trash.svg"
+              alt=""
+            />
+            <img
+              class="icon__crop"
+              data-index="2"
+              src="assets/icon-crop.svg"
+              alt=""
+            />
+          </div>
+        </label>
+        <input
+          id="file_2"
+          data-index="2"
+          multiple="multiple"
+          accept="image/png, image/gif, image/jpeg"
+          type="file"
+          name=""
+          class="input__image"
+        />
+        <div class="data__image-namebox">
+          <div class="text__title data__image-title">Hình ảnh 1</div>
+          <div class="text__description"></div>
+        </div>
+      </div>
+      <div class="section__image-item">
+        <label id="label_3" for="file_3">
+          <img class="icon__add" src="assets/circle-plus.svg" alt="" />
+          <div class="data__image-thumb" data-index="3"></div>
+          <div class="data__image-action">
+            <img
+              class="icon__trash"
+              data-index="3"
+              src="assets/icon-trash.svg"
+              alt=""
+            />
+            <img
+              class="icon__crop"
+              data-index="3"
+              src="assets/icon-crop.svg"
+              alt=""
+            />
+          </div>
+        </label>
+        <input
+          id="file_3"
+          data-index="3"
+          multiple="multiple"
+          accept="image/png, image/gif, image/jpeg"
+          type="file"
+          name=""
+          class="input__image"
+        />
+        <div class="data__image-namebox">
+          <div class="text__title data__image-title">Hình ảnh 2</div>
+        </div>
+      </div>
+      <div class="section__image-item">
+        <label id="label_4" for="file_4">
+          <img class="icon__add" src="assets/circle-plus.svg" alt="" />
+          <div class="data__image-thumb" data-index="4"></div>
+          <div class="data__image-action">
+            <img
+              class="icon__trash"
+              data-index="4"
+              src="assets/icon-trash.svg"
+              alt=""
+            />
+            <img
+              class="icon__crop"
+              data-index="4"
+              src="assets/icon-crop.svg"
+              alt=""
+            />
+          </div>
+        </label>
+        <input
+          id="file_4"
+          data-index="4"
+          multiple="multiple"
+          accept="image/png, image/gif, image/jpeg"
+          type="file"
+          name=""
+          class="input__image"
+        />
+        <div class="data__image-namebox">
+          <div class="text__title data__image-title">Hình ảnh 3</div>
+        </div>
+      </div>
+      <div class="section__image-item">
+        <label id="label_5" for="file_5">
+          <img class="icon__add" src="assets/circle-plus.svg" alt="" />
+          <div class="data__image-thumb" data-index="5"></div>
+          <div class="data__image-action">
+            <img
+              class="icon__trash"
+              data-index="5"
+              src="assets/icon-trash.svg"
+              alt=""
+            />
+            <img
+              class="icon__crop"
+              data-index="5"
+              src="assets/icon-crop.svg"
+              alt=""
+            />
+          </div>
+        </label>
+        <input
+          id="file_5"
+          data-index="5"
+          multiple="multiple"
+          accept="image/png, image/gif, image/jpeg"
+          type="file"
+          name=""
+          class="input__image"
+        />
+        <div class="data__image-namebox">
+          <div class="text__title data__image-title">Hình ảnh 4</div>
+        </div>
+      </div>
+      <div class="section__image-item">
+        <label id="label_6" for="file_6">
+          <img class="icon__add" src="assets/circle-plus.svg" alt="" />
+          <div class="data__image-thumb" data-index="6"></div>
+          <div class="data__image-action">
+            <img
+              class="icon__trash"
+              data-index="6"
+              src="assets/icon-trash.svg"
+              alt=""
+            />
+            <img
+              class="icon__crop"
+              data-index="6"
+              src="assets/icon-crop.svg"
+              alt=""
+            />
+          </div>
+        </label>
+        <input
+          id="file_6"
+          data-index="6"
+          multiple="multiple"
+          accept="image/png, image/gif, image/jpeg"
+          type="file"
+          name=""
+          class="input__image"
+        />
+        <div class="data__image-namebox">
+          <div class="text__title data__image-title">Hình ảnh 5</div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalCropImage"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Chỉnh sửa hình ảnh sản phẩm</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="img-container">
+              <div class="row">
+                <div class="col-md-9">
+                  <div id="cropper__index" style="display: none"></div>
+                  <img id="imageOnModal" src="" />
+                  <div class="cropper__action">
+                    <div class="lef__action">
+                      <div class="item__action" id="cropper-zoom-out">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.307 13.448a7.878 7.878 0 1 1 11.525-.412l2.003 2.003a.563.563 0 1 1-.796.796l-2.003-2.003a7.878 7.878 0 0 1-10.729-.384zm10.675-1.15a6.753 6.753 0 1 0-.684.684l.366-.318.318-.366zM5.064 7.315h5.627a.563.563 0 0 1 0 1.125H5.064a.563.563 0 1 1 0-1.125z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="item__action" id="cropper-zoom-in">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.307 13.448a7.878 7.878 0 1 1 11.525-.412l2.003 2.003a.563.563 0 1 1-.796.796l-2.003-2.003a7.878 7.878 0 0 1-10.729-.384zm10.675-1.15a6.753 6.753 0 1 0-.684.684l.366-.318.318-.366zM7.315 7.315v-2.25a.563.563 0 0 1 1.125 0v2.25h2.251a.563.563 0 0 1 0 1.125h-2.25v2.251a.563.563 0 0 1-1.126 0v-2.25h-2.25a.563.563 0 1 1 0-1.126h2.25z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="item__action" id="cropper-rotate">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 15 17"
+                        >
+                          <path
+                            fill-rule="nonzero"
+                            d="M5 7h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H5zm3.127-5.52l-.715-.652a.5.5 0 0 1 .674-.739l1.666 1.52a.5.5 0 0 1-.015.752l-1.666 1.4a.5.5 0 1 1-.644-.765l.616-.517c-3.988-.047-6.21 1.48-6.828 4.618a.5.5 0 0 1-.981-.194C.957 4.231 3.643 2.411 8.127 2.48z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="item__action" id="cropper-flip-horizontal">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 14"
+                        >
+                          <path
+                            d="M9.379.758l6.476 12.953a.2.2 0 0 1-.179.289H9V.847a.2.2 0 0 1 .379-.09zm-2.758 0A.2.2 0 0 1 7 .848V14H.324a.2.2 0 0 1-.18-.29L6.622.759zM6 4.236L1.618 13H6V4.236z"
+                            fill-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="item__action" id="cropper-flip-vertical">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 14 16"
+                        >
+                          <path
+                            d="M13.242 9.379L.29 15.855A.2.2 0 0 1 0 15.676V9h13.153a.2.2 0 0 1 .09.379zm0-2.758a.2.2 0 0 1-.09.379H0V.324a.2.2 0 0 1 .29-.18l12.952 6.477zM9.764 6L1 1.618V6h8.764z"
+                            fill-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="right__action">
+                      <button
+                        class="button-cropper-reset text__white"
+                        id="cropper-reset"
+                      >
+                        Nhập Lại
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <p class="preview__text">Xem trước</p>
+                  <div class="preview" style="display: hidden"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Đóng
+            </button>
+            <button type="button" class="btn btn-primary button-save-cropper">
+              Lưu
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"
+      integrity="sha256-CgvH7sz3tHhkiVKh05kSUgG97YtzYNnWt6OXcmYzqHY="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <script>
+      var imageList = [];
+      const RULE_TYPE_UPLOAD = ["image/jpeg", "image/png"];
+      const MAX_SIZE_UPLOAD = 4; // MB
+      const TOTAL_IMAGE = 5;
+
+      $(document).ready(function () {
+        $("input[type=file]").change(function () {
+          const INDEX = $(this).attr("data-index");
+          handleImage = new HandleImage(parseInt(INDEX), this.files);
+        });
+
+        $(".data__image-thumb, .icon__crop, .icon__trash").mouseover(
+          function () {
+            index = $(this).attr("data-index");
+            $(`#label_${index} .data__image-action`).css("display", "block");
+          }
+        );
+        $(".data__image-thumb, .icon__crop, .icon__trash").mouseout(
+          function () {
+            index = $(this).attr("data-index");
+            $(`#label_${index} .data__image-action`).css("display", "none");
+          }
+        );
+
+        $(".icon__trash").click(function () {
+          index = parseInt($(this).attr("data-index"));
+          imageList[index - 1] = undefined;
+          removeImage(index);
+          $(`#label_${index}`).one("click", function () {
+            return false;
+          });
+        });
+
+        $(".icon__crop").click(function () {
+          index = parseInt($(this).attr("data-index"));
+          $("#imageOnModal").attr("src", imageList[index - 1].url);
+          $("#cropper__index").text(index);
+          $("#modalCropImage").modal("show");
+        });
+
+        const image = document.getElementById("imageOnModal");
+        $("#modalCropImage")
+          .on("shown.bs.modal", function () {
+            cropper = new Cropper(image, {
+              aspectRatio: 1 / 1,
+              guides: false,
+              viewMode: 1,
+              dragMode: "move",
+              responsive: true,
+              minCropBoxHeight: 250,
+              minCropBoxWidth: 250,
+              toggleDragModeOnDblclick: false,
+              rounded: true,
+              minContainerWidth: 380,
+              minContainerHeight: 380,
+              rotatable: true,
+              fillColor: "#fff",
+              preview: ".preview",
+            });
+
+            $("#cropper-rotate").click(function () {
+              cropper.rotate(90);
+            });
+            $("#cropper-zoom-out").click(function () {
+              cropper.zoom(-0.1);
+            });
+            $("#cropper-zoom-in").click(function () {
+              cropper.zoom(0.1);
+            });
+            let isHorizontal = 1;
+            $("#cropper-flip-horizontal").click(function () {
+              isHorizontal++;
+              if (isHorizontal % 2 == 0) {
+                cropper.scale(-1, 1);
+              } else {
+                cropper.scale(1, 1);
+              }
+            });
+            let isVertical = 1;
+            $("#cropper-flip-vertical").click(function () {
+              isVertical++;
+              if (isVertical % 2 == 0) {
+                cropper.scale(1, -1);
+              } else {
+                cropper.scale(1, 1);
+              }
+            });
+            $("#cropper-reset").click(function () {
+              cropper.reset();
+            });
+          })
+          .on("hidden.bs.modal", function () {
+            cropper.destroy();
+            cropper = null;
+          });
+
+        $(".button-save-cropper").click(function () {
+          index = parseInt($("#cropper__index").text());
+          canvas = cropper.getCroppedCanvas();
+
+          canvas.toBlob(async function (blob) {
+            imageList[index - 1].url = await readImage(blob);
+            showImage(index);
+            $("#modalCropImage").modal("hide");
+          });
+        });
+      });
+
+      function readImage(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = (error) => reject(error);
+        });
+      }
+
+      function showImage(index) {
+        $(`#label_${index}`).find(".data__image-thumb").css("display", "block");
+        $(`#label_${index}`).find(".icon__add").css("display", "none");
+        $(`#file_${index}`).prop("disabled", true);
+
+        $(`#label_${index}`)
+          .find(".data__image-thumb")
+          .css("background-image", `url("${imageList[index - 1].url}")`);
+      }
+
+      function removeImage(index) {
+        $(`#label_${index}`).find(".data__image-thumb").css("display", "none");
+        $(`#label_${index}`).find(".icon__add").css("display", "block");
+        $(`#file_${index}`).prop("disabled", false);
+      }
+
+      class HandleImage {
+        constructor(index, files) {
+          this.files = files;
+          this.index = index;
+
+          this.initListImage();
+        }
+
+        initListImage() {
+          let key = 0;
+          for (let i = this.index - 1; i <= TOTAL_IMAGE; i++) {
+            if (imageList[i]) continue;
+
+            if (this.files[key]) {
+              const IMAGE_SIZE = this.calculImageSize(this.files[key]);
+              if (IMAGE_SIZE > MAX_SIZE_UPLOAD) {
+                swal(
+                  "Thất bại",
+                  `Hình ảnh tải lên không được quá ${MAX_SIZE_UPLOAD}MB`,
+                  "error"
+                );
+                imageList[i] = undefined;
+                return;
+              }
+
+              imageList[i] = this.files[key];
+              key++;
+            }
+          }
+          this.loopImageList(imageList);
+        }
+
+        async loopImageList(imageList) {
+          for (let i = 0; i < 6; i++) {
+            if (!imageList[i]) {
+              removeImage(i + 1);
+              continue;
+            }
+            let typeFile = imageList[i]["type"];
+            if (!RULE_TYPE_UPLOAD.includes(typeFile)) {
+              swal("Thất bại", "Hình ảnh tải lên không hợp lệ", "error");
+              imageList[i] = undefined;
+              continue;
+            }
+            if (!imageList[i].url)
+              imageList[i].url = await readImage(imageList[i]);
+            showImage(i + 1);
+          }
+        }
+
+        calculImageSize(file) {
+          return (file.size / Math.pow(1024, 2)).toFixed(2);
+        }
+      }
+    </script>
+  </body>
+</html>
