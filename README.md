@@ -5,4 +5,4 @@ preview image,
 crop image,
 store image,
 by image index.
-automatic ignores errors when uploading.
+automatic ignores errors when uploading many image.
